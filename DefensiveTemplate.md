@@ -17,22 +17,22 @@ The following machines were identified on the network:
      - Penetration Tester
   - **IP Address**:
      - 192.168.1.90
-- **ELK
+- **ELK**
   - **Operating System**:
      - Ubuntu 18.04
   - **Purpose**:
      - The ELK Stack (Elastic and Kibana)
   - **IP Address**:
      - 192.168.1.100
-- Capstone
+- **Capstone**
   - **Operating System**:
      - Ubuntu 18.04
   - **Purpose**:
      - Vulnerable Web Server
   - **IP Address**:
      - 192.168.1.105
-- Target 1
- - **Operating System**:
+- **Target 1**
+  - **Operating System**:
      - Debian/Linux 8
   - **Purpose**:
      - WordPress Host
