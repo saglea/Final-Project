@@ -11,7 +11,9 @@
 Nmap scan results for each machine reveal the below services and OS details:
  
 Command: $ nmap -sV 192.168.1.110
-  ![redteam1](https://user-images.githubusercontent.com/91024338/143156404-1f4162a4-e0e5-4385-884b-4daf231ff115.JPG)
+  
+  
+![redteam1](https://user-images.githubusercontent.com/91024338/143156404-1f4162a4-e0e5-4385-884b-4daf231ff115.JPG)
 
  
 This scan identifies the services below as potential points of entry:
