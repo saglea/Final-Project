@@ -53,7 +53,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 
-	-Password:michael
+      -Password:michael
       - SSH in michael: ssh michael@192.168.1.110
       - cd var/www/html
       - ls -l
@@ -68,8 +68,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - Flag2: fc3fd58dcdad9ab23faca6e9a3e581c
     - **Exploit Used**
       - Used WPScan to enumerate users of the Target 1 WordPress site
-	- Used password from previous Brute Force
-	-Password: michael
+      - Used password from previous Brute Force
+      -Password: michael
       - ssh michael@192.168.1.110
       - cd var/www
       - ls 
@@ -79,6 +79,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       
       
 - Flag3:afc01ab56b50591e7dccf93122770cd2
+
 **Exploit Used**
 Same exploits used to gain Flag 1 and 2:
 Accessing MySQL Database
