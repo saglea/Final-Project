@@ -63,6 +63,7 @@ WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR T
   - **Reliability**: This alert is highly reliable. It can detect if there are malicious programs running as well as help improve on CPU usage. 
   
 ![blueteam1](https://user-images.githubusercontent.com/91024338/143162166-382498c9-510b-4384-ba71-8dc6c8793938.JPG)
+![blueteam4](https://user-images.githubusercontent.com/91024338/143172366-e07a06d9-496d-48d5-9c84-54474b52c13c.JPG)
 
   
 #### HTTP Request Size Monitor
@@ -92,10 +93,10 @@ WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE
  
 ![blueteam3](https://user-images.githubusercontent.com/91024338/143168831-58cc9e0d-f5ae-4981-a4cc-5250c129937e.JPG)
 ![blueteam2](https://user-images.githubusercontent.com/91024338/143168862-240fe758-24e0-4d1c-80f8-92084d86ddd6.JPG)
+![blueteam5](https://user-images.githubusercontent.com/91024338/143172407-fa90e58a-328c-4ee9-b9e4-b6f2e21e117b.JPG)
 
  
-  TODO(SCREENSHOT HERE)
- 
+  
  
  
  
