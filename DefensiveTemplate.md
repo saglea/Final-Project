@@ -50,7 +50,7 @@ As such, the following alerts have been implemented:
  
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
  
-#### Name of Alert 1
+#### CPU Usage Monitor
  
 CPU Usage Monitor is implemented as follows:
  
@@ -64,7 +64,8 @@ WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR T
 ![blueteam1](https://user-images.githubusercontent.com/91024338/143162166-382498c9-510b-4384-ba71-8dc6c8793938.JPG)
 
   
-#### Name of Alert 2
+#### HTTP Request Size Monitor
+
 HTTP Request Size Monitor is implemented as follows:
 WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
   - **Metric**: WHEN sum() of http.request.bytes OVER all documents
@@ -75,7 +76,8 @@ WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1
 ![Project 3 2](https://user-images.githubusercontent.com/91024338/143162384-795233e5-09e7-464f-bf5e-566a69b3946f.JPG)
 ![Project 3 1](https://user-images.githubusercontent.com/91024338/143162341-f6171742-1149-4bd1-bb7a-262100de1a5f.JPG)
 
-#### Name of Alert 3
+#### Excessive HTTP Errors
+
 Excessive HTTP Errors is implemented as follows:
 WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
   - **Metric**: WHEN count() GROUPED OVER top 5 'http.response.status_code'
