@@ -38,6 +38,7 @@ The following machines were identified on the network:
      - WordPress Host
   - **IP Address**:
      - 192.168.1.110
+
 -TODO:NETWORK DIAGRAM (SREECNSHOT HERE)
  
 ### Description of Targets
@@ -67,7 +68,9 @@ WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR T
 #### HTTP Request Size Monitor
 
 HTTP Request Size Monitor is implemented as follows:
+
 WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
+
   - **Metric**: WHEN sum() of http.request.bytes OVER all documents
   - **Threshold**: IS ABOVE 3500
   - **Vulnerability Mitigated**: DDOS attacks / Code injection in HTTP requests 
@@ -79,7 +82,9 @@ WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1
 #### Excessive HTTP Errors
 
 Excessive HTTP Errors is implemented as follows:
+
 WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
+
   - **Metric**: WHEN count() GROUPED OVER top 5 'http.response.status_code'
   - **Threshold**: IS ABOVE 400
   - **Vulnerability Mitigated**: Brute Force/ Enumeration
