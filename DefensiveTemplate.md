@@ -1,73 +1,91 @@
 # Blue Team: Summary of Operations
-
+ 
 ## Table of Contents
 - Network Topology
 - Description of Targets
 - Monitoring the Targets
 - Patterns of Traffic & Behavior
 - Suggestions for Going Further
-
+ 
 ### Network Topology
-_TODO: Fill out the information below._
 
 The following machines were identified on the network:
-- Name of VM 1
+- Kali
   - **Operating System**:
+     - Debian Kali 5.4.0
   - **Purpose**:
+     - Penetration Tester
   - **IP Address**:
-- Name of VM 2
+     - 192.168.1.90
+- ELK
   - **Operating System**:
+     - Ubuntu 18.04
   - **Purpose**:
+     - The ELK Stack (Elastic and Kibana)
   - **IP Address**:
-- Etc.
-
+     - 192.168.1.100
+- Capstone
+ - **Operating System**:
+     - Ubuntu 18.04
+  - **Purpose**:
+     - Vulnerable Web Server
+  - **IP Address**:
+     - 192.168.1.105
+- Target 1
+ - **Operating System**:
+     - Debian/Linux 8
+  - **Purpose**:
+     - WordPress Host
+  - **IP Address**:
+     - 192.168.1.110
+-TODO:NETWORK DIAGRAM (SREECNSHOT HERE)
+ 
 ### Description of Targets
-_TODO: Answer the questions below._
-
-The target of this attack was: `Target 1` (TODO: IP Address).
-
-Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. As such, the following alerts have been implemented:
-
+The target of this attack was: Target 1 (192.168.1.110)
+ 
+Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are possible ports of entry for attackers. 
+As such, the following alerts have been implemented:
+ 
 ### Monitoring the Targets
-
+ 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
-
+ 
 #### Name of Alert 1
-_TODO: Replace `Alert 1` with the name of the alert._
+ 
+CPU Usage Monitor is implemented as follows:
+ 
+WHEN max() OF system.process.cpu.total.pct OVER all documents IS ABOVE 0.5 FOR THE LAST 5 minutes
+ 
+  - **Metric**: WHEN max() OF system.process.cpu.total.pct OVER all documents
+  - **Threshold**: IS ABOVE 0.5
+  - **Vulnerability Mitigated**: Programs (viruses) or malicious software (malware) running on the system taking up valuable resources
+  - **Reliability**: This alert is highly reliable. It can detect if there are malicious programs running as well as help improve on CPU usage. 
+  
+![blueteam1](https://user-images.githubusercontent.com/91024338/143162166-382498c9-510b-4384-ba71-8dc6c8793938.JPG)
 
-Alert 1 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
-
+  
 #### Name of Alert 2
-Alert 2 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+HTTP Request Size Monitor is implemented as follows:
+WHEN sum() of http.request.bytes OVER all documents IS ABOVE 3500 FOR THE LAST 1 minute
+  - **Metric**: WHEN sum() of http.request.bytes OVER all documents
+  - **Threshold**: IS ABOVE 3500
+  - **Vulnerability Mitigated**: DDOS attacks / Code injection in HTTP requests 
+  - **Reliability**: This alert is a medium reliabilty as it can create some false positives. It could detect actual HTTP traffic as well as non malicious HTTP request. 
+  
+![Project 3 2](https://user-images.githubusercontent.com/91024338/143162384-795233e5-09e7-464f-bf5e-566a69b3946f.JPG)
+![Project 3 1](https://user-images.githubusercontent.com/91024338/143162341-f6171742-1149-4bd1-bb7a-262100de1a5f.JPG)
 
 #### Name of Alert 3
-Alert 3 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+Excessive HTTP Errors is implemented as follows:
+WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE LAST 5 minutes
+  - **Metric**: WHEN count() GROUPED OVER top 5 'http.response.status_code'
+  - **Threshold**: IS ABOVE 400
+  - **Vulnerability Mitigated**: Brute Force/ Enumeration
+  - **Reliability**: This alert is highly reliable. Any error code 400 and above are server and client errors and would be of high concern if they were being triggered at any rate but more importantly if the alert is happening at a high rate. Using the alert to trigger error codes 400 and higher will also filter out any successful responses.  
+  (SCREENSHOT HERE)
+ 
+ 
+ 
+ 
 
-_TODO Note: Explain at least 3 alerts. Add more if time allows._
 
-### Suggestions for Going Further (Optional)
-_TODO_: 
-- Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
-
-The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
-- Vulnerability 1
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 2
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 3
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
