@@ -89,7 +89,8 @@ WHEN count() GROUPED OVER top 5 'http.response.status_code' IS ABOVE 400 FOR THE
   - **Threshold**: IS ABOVE 400
   - **Vulnerability Mitigated**: Brute Force/ Enumeration
   - **Reliability**: This alert is highly reliable. Any error code 400 and above are server and client errors and would be of high concern if they were being triggered at any rate but more importantly if the alert is happening at a high rate. Using the alert to trigger error codes 400 and higher will also filter out any successful responses.  
-  (SCREENSHOT HERE)
+  
+  TODO(SCREENSHOT HERE)
  
  
  
