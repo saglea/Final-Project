@@ -10,14 +10,14 @@
 ### Network Topology
 
 The following machines were identified on the network:
-- Kali
+- **Kali**
   - **Operating System**:
      - Debian Kali 5.4.0
   - **Purpose**:
      - Penetration Tester
   - **IP Address**:
      - 192.168.1.90
-- ELK
+- **ELK
   - **Operating System**:
      - Ubuntu 18.04
   - **Purpose**:
@@ -25,7 +25,7 @@ The following machines were identified on the network:
   - **IP Address**:
      - 192.168.1.100
 - Capstone
- - **Operating System**:
+  - **Operating System**:
      - Ubuntu 18.04
   - **Purpose**:
      - Vulnerable Web Server
