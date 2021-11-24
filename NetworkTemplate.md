@@ -11,7 +11,7 @@ You must inspect your traffic capture to answer the following questions:
 TODO : (SCREENSHOT)
 
 2) What is the IP address of the Domain Controller (DC) of the AD network?
-   - IP address: 10.6.12.12 (frank-n-ted.com)
+   - IP address: 10.6.12.12 (Frank-n-Ted-DC.frank-n-ted.com)
    - Filter: TO DO
    
 TODO : (SCREENSHOT)
