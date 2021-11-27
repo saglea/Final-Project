@@ -26,7 +26,7 @@ You must inspect your traffic capture to answer the following questions:
 3) What is the name of the malware downloaded to the 10.6.12.203 machine?
    - Downloaded malware: june11.dll
    - Once you have found the file, export it to your Kali machine's desktop.
-   - Command to export: TO DO
+   - Command to export: File > Export Objects > HTTP > Text Filter: june11.dll > Save > Desktop
  
 ![Networkp 11](https://user-images.githubusercontent.com/91024338/143693443-960e3c29-5f64-4aca-8942-31d1d140accf.JPG)
 ![NetworkP 9](https://user-images.githubusercontent.com/91024338/143693672-0ff9e083-1b86-4878-bd5e-612a3fd6e24b.JPG)
