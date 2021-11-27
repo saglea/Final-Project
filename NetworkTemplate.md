@@ -68,9 +68,9 @@ The network has standard gateway and broadcast addresses.
 3) What are the IP addresses used in the actual infection traffic?  
   - Statistics > Conversations > IPv4 > Packets (high to low)
   
-   - 185.243.115.84
-   - 172.16.4.205
-   - 166.62.111.64 
+     - 185.243.115.84
+     - 172.16.4.205
+     - 166.62.111.64 
    
 ![net8](https://user-images.githubusercontent.com/91024338/143719375-57778b08-9382-4987-9193-016e4ae0e44a.JPG)
  
