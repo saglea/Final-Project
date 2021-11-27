@@ -25,6 +25,7 @@ You must inspect your traffic capture to answer the following questions:
 
 3) What is the name of the malware downloaded to the 10.6.12.203 machine?
    - Downloaded malware: june11.dll
+   - Filter: ip.addr==10.6.12.203 and http.request.method==GET
    - Command to export: File > Export Objects > HTTP > Text Filter: june11.dll > Save > Desktop
  
 ![Networkp 11](https://user-images.githubusercontent.com/91024338/143693443-960e3c29-5f64-4aca-8942-31d1d140accf.JPG)
