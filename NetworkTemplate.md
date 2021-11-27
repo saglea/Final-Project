@@ -55,8 +55,13 @@ The network has standard gateway and broadcast addresses.
     - Host name: ROTTERDAM-PC
     - IP address: 172.16.4.205
     - MAC address: 00:59:b0:63:a4
+
+![net6](https://user-images.githubusercontent.com/91024338/143713406-d38d3088-6542-4337-89e4-0e75996b400d.JPG)
+
     
-2) What is the username of the Windows user whose computer is infected? matthij.devries
+2) What is the username of the Windows user whose computer is infected?
+  - matthij.devries
+  
 3) What are the IP addresses used in the actual infection traffic?  
    - 172.16.4.205
    - 166.62.11.64
