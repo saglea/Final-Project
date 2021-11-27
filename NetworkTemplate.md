@@ -92,7 +92,9 @@ Your task is to isolate torrent traffic and answer the following questions in yo
 1) Find the following information about the machine with IP address `10.0.0.201`:
     - MAC address: 00:16:17:18:66:c8
     - Windows username: elmer.blanco
-    - OS version: TO DO
+    - OS version: BLANCO-DESKTOP
+    - Filter: ip.src==10.0.0.201 and kerberos.CName.String
+    
     
 ![net4](https://user-images.githubusercontent.com/91024338/143702020-d8c6726c-cdbd-4b4e-a65c-58d696f53558.JPG)
 
