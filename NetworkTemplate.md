@@ -38,7 +38,7 @@ You must inspect your traffic capture to answer the following questions:
 
 5) What kind of malware is this classified as?
    
-   -Malware classification: Trojan
+   - Malware classification: Trojan
 
 
 
