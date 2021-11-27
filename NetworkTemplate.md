@@ -62,6 +62,9 @@ The network has standard gateway and broadcast addresses.
 2) What is the username of the Windows user whose computer is infected?
    - matthij.devries
   
+![net7](https://user-images.githubusercontent.com/91024338/143719276-3a377e81-9468-4626-bd45-974863dccd14.JPG)
+ 
+  
 3) What are the IP addresses used in the actual infection traffic?  
    - 172.16.4.205
    - 166.62.11.64
