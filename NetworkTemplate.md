@@ -34,7 +34,7 @@ You must inspect your traffic capture to answer the following questions:
        
 4) Upload the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
 
-![NetworkP13](https://user-images.githubusercontent.com/91024338/143693955-e37bbc2e-a6f1-42a7-a56a-be48dd77aae8.JPG)
+![net9](https://user-images.githubusercontent.com/91024338/143720547-b47ffc9c-4da9-4b42-b3b4-99780c0efbd8.JPG)
 
 5) What kind of malware is this classified as?
    
