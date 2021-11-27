@@ -37,6 +37,7 @@ You must inspect your traffic capture to answer the following questions:
 ![NetworkP13](https://user-images.githubusercontent.com/91024338/143693955-e37bbc2e-a6f1-42a7-a56a-be48dd77aae8.JPG)
 
 5) What kind of malware is this classified as?
+   
    -Malware classification: Trojan
 
 
