@@ -20,7 +20,7 @@ You must inspect your traffic capture to answer the following questions:
    - IP address: 10.6.12.12 (Frank-n-Ted-DC.frank-n-ted.com)
    - Filter: ip.src==10.6.12.0/24
 
-![net1](https://user-images.githubusercontent.com/91024338/143692742-995e64fb-44a3-4a36-aed1-bc38ab67a818.JPG)
+![net5](https://user-images.githubusercontent.com/91024338/143707990-df6fbd9a-2fdc-4b22-b5dd-5514930ed307.JPG)
 
 
 3) What is the name of the malware downloaded to the 10.6.12.203 machine?
