@@ -39,7 +39,8 @@ The following machines were identified on the network:
   - **IP Address**:
      - 192.168.1.110
 
--TODO:NETWORK DIAGRAM (SREECNSHOT HERE)
+![net13](https://user-images.githubusercontent.com/91024338/143778276-baf362bc-19eb-4741-abf5-1fcc352238ae.JPG)
+
  
 ### Description of Targets
 The target of this attack was: Target 1 (192.168.1.110)
