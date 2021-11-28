@@ -39,7 +39,7 @@ The following machines were identified on the network:
   - **IP Address**:
      - 192.168.1.110
 
-![image](https://user-images.githubusercontent.com/91024338/143778379-9e32cb38-61fd-4876-8f03-933a387af8dc.png)
+![net13](https://user-images.githubusercontent.com/91024338/143779282-85ad0323-3777-45ff-93f2-15bcdb0abd37.JPG)
 
 
  
