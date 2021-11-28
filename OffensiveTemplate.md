@@ -83,7 +83,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  - Flag3:afc01ab56b50591e7dccf93122770cd2
  - **Exploits Used**
       - Same exploits used to gain Flag 1 and 2:
-       - Accessing MySQL Database
+        - Accessing MySQL Database
 - Commands:
 	- cd /var/www/html/wordpress
 	- cat wp_config.php
@@ -131,8 +131,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
  - Results: 
         - Steven’s password: pink84
+        - After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
  
- - After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
  - Commands:
 	- ssh steven@192.168.1.110
 	- password: pink84
