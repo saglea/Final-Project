@@ -131,7 +131,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
  - Results: 
         - Steven’s password: pink84
-        - After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
+        - After I cracked Steven’s password I ssh'ed as Steven,
+          checked for root privileges and escalated to root with Python.
  
  - Commands:
 	- ssh steven@192.168.1.110
