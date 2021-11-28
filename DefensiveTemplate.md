@@ -39,7 +39,8 @@ The following machines were identified on the network:
   - **IP Address**:
      - 192.168.1.110
 
-![net13](https://user-images.githubusercontent.com/91024338/143778276-baf362bc-19eb-4741-abf5-1fcc352238ae.JPG)
+![image](https://user-images.githubusercontent.com/91024338/143778379-9e32cb38-61fd-4876-8f03-933a387af8dc.png)
+
 
  
 ### Description of Targets
