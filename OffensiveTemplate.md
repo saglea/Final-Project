@@ -80,11 +80,10 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![redteam9](https://user-images.githubusercontent.com/91024338/143157461-5f80f5d5-3ed2-4d53-9237-b3a63c09179b.JPG)
       
       
-- Flag3:afc01ab56b50591e7dccf93122770cd2
-
-**Exploits Used**
- - Same exploits used to gain Flag 1 and 2:
-        - Accessing MySQL Database
+ - Flag3:afc01ab56b50591e7dccf93122770cd2
+ - **Exploits Used**
+      - Same exploits used to gain Flag 1 and 2:
+       - Accessing MySQL Database
 - Commands:
 	- cd /var/www/html/wordpress
 	- cat wp_config.php
@@ -104,8 +103,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
  
  
-- Flag4:715dea6c055b9fe3337544932f2941ce
--**Exploits used**
+ - Flag4:715dea6c055b9fe3337544932f2941ce
+ - **Exploits used**
      - Used MySQL database to gain access to user credentials.
      - Used John the Ripper to crack the password hash.
      - Used Python to gain root privileges.
