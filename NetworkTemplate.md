@@ -47,22 +47,23 @@ The DC for this network lives at 172.16.4.4 and is named Mind-Hammer-DC.
 The network has standard gateway and broadcast addresses.
 
 
-Information about the infected Windows machine:
-    - Host name: ROTTERDAM-PC
-    - IP address: 172.16.4.205
-    - MAC address: 00:59:b0:63:a4
+ - Information about the infected Windows machine:
+
+   - Host name: ROTTERDAM-PC
+   - IP address: 172.16.4.205
+   - MAC address: 00:59:b0:63:a4
 
 ![net6](https://user-images.githubusercontent.com/91024338/143713406-d38d3088-6542-4337-89e4-0e75996b400d.JPG)
 
     
-Username of the Windows user whose computer is infected:
+ - Username of the Windows user whose computer is infected:
    - matthijs.devries
   
 ![net7](https://user-images.githubusercontent.com/91024338/143719276-3a377e81-9468-4626-bd45-974863dccd14.JPG)
  
   
-IP addresses used in the actual infection traffic:  
-  - Statistics > Conversations > IPv4 > Packets (high to low)
+ - IP addresses used in the actual infection traffic:  
+    - Statistics > Conversations > IPv4 > Packets (high to low)
   
      - 185.243.115.84
      - 172.16.4.205
@@ -82,7 +83,7 @@ The DC is associated with the domain dogoftheyear.net.
 
 Your task is to isolate torrent traffic.
 
-Information about the machine with IP address `10.0.0.201`:
+ - Information about the machine with IP address `10.0.0.201`:
     - MAC address: 00:16:17:18:66:c8
     - Windows username: elmer.blanco
     - OS version: BLANCO-DESKTOP
@@ -91,7 +92,7 @@ Information about the machine with IP address `10.0.0.201`:
     
 ![net4](https://user-images.githubusercontent.com/91024338/143702020-d8c6726c-cdbd-4b4e-a65c-58d696f53558.JPG)
 
-Torrent file the user downloaded:
+ - Torrent file the user downloaded:
    - Torrent file: Betty_Boop_Rythm_on_the_Reservation.avi.torrent
    - Filter: ip.addr==10.0.0.201 and http.request.method==GET
    
