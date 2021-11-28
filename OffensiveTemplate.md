@@ -149,6 +149,6 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![redteam19](https://user-images.githubusercontent.com/91024338/143158438-ac7b1fac-acd6-48ea-ac5b-aa9e31184597.JPG)
 
  
-
+ 
  
 
