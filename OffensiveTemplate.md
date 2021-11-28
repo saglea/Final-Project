@@ -83,7 +83,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 - Flag3:afc01ab56b50591e7dccf93122770cd2
 
 **Exploits Used**
-     -Same exploits used to gain Flag 1 and 2:
+ - Same exploits used to gain Flag 1 and 2:
         - Accessing MySQL Database
 - Commands:
 	- cd /var/www/html/wordpress
