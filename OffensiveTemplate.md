@@ -40,7 +40,7 @@ The following vulnerabilities were identified on each target:
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
  - Flag1: b9bbcb33ellb80be759c4e844862482d
- - **Exploit Used**
+ - **Exploits Used**
       - Used WPScan to enumerate users of the Target 1 WordPress site
       - Used Brute Force to guess Michael’s password
  - Command:
