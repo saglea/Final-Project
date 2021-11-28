@@ -53,7 +53,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 
-- Command:
+ - Commands:
       - password:michael
       - ssh in michael: ssh michael@192.168.1.110
       - cd var/www/html
