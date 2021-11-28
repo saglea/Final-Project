@@ -29,7 +29,7 @@ Their IP addresses are somewhere in the range 10.6.12.0/24.
 ![net10](https://user-images.githubusercontent.com/91024338/143720586-a0109942-9add-4e3f-a547-bf2f2b9b6d0d.JPG)
 
        
-Uploaded the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
+ - Uploaded the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
 
 ![net9](https://user-images.githubusercontent.com/91024338/143720547-b47ffc9c-4da9-4b42-b3b4-99780c0efbd8.JPG)
 
