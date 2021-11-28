@@ -7,7 +7,7 @@ They are constantly watching videos on YouTube.
 Their IP addresses are somewhere in the range 10.6.12.0/24.
 
 ## Time Thieves 
-You must inspect your traffic capture to answer the following questions:
+
 
    - Domain name: frank-n-ted.com
    - Filter: ip.src ==10.6.12.0/24
