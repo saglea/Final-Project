@@ -82,7 +82,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       
 - Flag3:afc01ab56b50591e7dccf93122770cd2
 
-**Exploit Used**
+**Exploits Used**
      -Same exploits used to gain Flag 1 and 2:
         - Accessing MySQL Database
 - Commands:
@@ -105,7 +105,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
  
  
 - Flag4:715dea6c055b9fe3337544932f2941ce
--**Exploit used**
+-**Exploits used**
      - Used MySQL database to gain access to user credentials.
      - Used John the Ripper to crack the password hash.
      - Used Python to gain root privileges.
@@ -121,7 +121,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 ![redteam14](https://user-images.githubusercontent.com/91024338/143157919-218bf1ae-63f2-4b22-80a1-ac2fc98b7226.JPG)
 
  
-- Commands:
+ - Commands:
 	- cd /usr/share/wordlist
 	- john --wordlist=rockyou.txt wp_hashes.txt
  
@@ -130,11 +130,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 
  
-- Results: 
+ - Results: 
         - Steven’s password: pink84
  
-- After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
-- Commands:
+ - After I cracked Steven’s password I SSH as Steven, checked for root privileges and escalated to root with Python.
+ - Commands:
 	- ssh steven@192.168.1.110
 	- password: pink84
 	- sudo -l
